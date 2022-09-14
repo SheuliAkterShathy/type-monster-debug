@@ -116,8 +116,9 @@ const start = () => {
       countdownOverlay.style.display = "flex";
       display.classList.remove("inactive");
 
-      clearInterval(startCountdown);
+     console.log(clearInterval(startCountdown));
       startTime = new Date().getTime();
+      console.log(startTime)
     }
     count--;
   }, 1000);
@@ -132,8 +133,8 @@ displayHistory();
 // Show typing time spent
 setInterval(() => {
   const currentTime = new Date().getTime();
-  const timeSpent = (currentTime - startTime) / 1000;
-
+  const timeSpent = parseInt((currentTime - startTime) / 1000);
+// console.log()
 
   document.getElementById("show-time").innerHTML = `${startTime ? timeSpent : 0} seconds`;
 }, 1000);
