@@ -5,32 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog Speed Monster</title>
-    <style>
-        body{
-            margin: 10px 100px;
-        
-        }
-        ul {
-       list-style-type: none;
-       margin: 0;
-       padding: 0;
-     }
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  </head>
+  <style>
+   header{
+    margin: 5px 70px;
+   }
+   ul {
+    list-style-type: none;
+    margin-right: 0;
+    padding: 0;
+   }
 
    li {
    display: inline;
    float: right;
-   
    }
-   a {
+
+  a {
   color: black;
   margin-right: 10px;
   font-size: 20px;
-
   text-decoration: none;
   border: 2px solid black;
   border-radius: 15%;
   padding: 3px 10px;
 }
+
     </style>
 </head>
 <body>
@@ -39,34 +40,78 @@
             <li><a href="">Blog</a></li>
             <li><a href="index.html">Home</a></li>
         </ul>
-        <h1> Questions-Answer.</h1>
     </header>
     <main>
-        <div>
-           <h2>Question 1:: What is the difference between local storage and session storage?</h2>
-           <p>Answer: The difference between sessionStorage and localStorage is that localStorage data does not expire, whereas sessionStorage data is cleared when the page session ends.Data is not available for future sessions whereas data is available in localStorage.</p>
+       
+  <section class="container question-section">
+        <div class="text-center">
+          <h2 class="fw-bold mb-3">Blog answers.</h2>
+         
         </div>
-        <div>
-            <h2>Question 2:: What is the difference between global scope and block scope?</h2> 
-            <p>Answer: In a browser environment, the global scope is controlled by the window object , it's controlled by the global object. Block scopes are what you get when you use if statements, for statements, and the like.A variable declared outside a function, becomes GLOBAL.'Let' and 'const' provide Block Scope in JavaScript.Variables declared inside a { } block cannot be accessed from outside the block:</p>
+
+       <div class="accordion questions-ans mx-auto mt-5" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Question 1:: What is the difference between local storage and session storage?
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    Answer: The difference between sessionStorage and localStorage is that localStorage data does not expire, whereas sessionStorage data is cleared when the page session ends. <br> Data is not available for future sessions in SessionStorage whereas data is available for future sessions in localStorage.Saves data in key/value pairs in the browser for both storage.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Question 2:: What is the difference between global scope and block scope?
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    Answer: In a browser environment, the global scope is controlled by the window object , it's controlled by the global object.Global scope can be defined anywhere of JS code.A variable declared outside a function, becomes Global. <br> Block scopes are what you get when you use if statements, for statements, and the like. 'Let' and 'const' provide Block Scope in JavaScript.Variables declared inside a { } block cannot be accessed from outside the block.
+                </div>
+              </div>
+            </div>
+            
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Question 3:: How Event loop works in JavaScript?
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    Answer: The Event Loop has one simple job — to monitor the Call Stack and the Callback Queue. If the Call Stack is empty, the Event Loop will take the first event from the queue and will push it to the Call Stack, which effectively runs it. Such an iteration is called a tick in the Event Loop.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFour">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                Question 4:: How much way we get Undefined?
+              </button>
+            </h2>
+            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                Answer: There are 8 ways to get Undefined:- <br>
+                1.Variable that is not initialized. <br>
+                2.Function with no return. <br>
+                3.Parameter that is not passed will be Undefined. <br>
+                4.If return has nothing on the right side will return undefined. <br>
+                5.Property that doesn,t exists on an object.  <br>
+                6.Accessing array elements outside of the index range. <br>
+                7.Deleting an element inside an array. <br>
+                8.If set a value directly will give undefined. <br>
+              </div>
+            </div>
+          </div>
         </div>
-        <div>
-            <h2>Question 3:: How Event loop works in JavaScript?</h2>
-            <p>Answer: The Event Loop has one simple job — to monitor the Call Stack and the Callback Queue. If the Call Stack is empty, the Event Loop will take the first event from the queue and will push it to the Call Stack, which effectively runs it. Such an iteration is called a tick in the Event Loop.</p>
-        </div>
-        <div>
-            <h2>Question 4:: How much way we get Undefined?</h2>
-            <p>Answer: There are 8 ways to get Undefined:
-                1.Variable that is not initialized.
-                2.Function with no return.
-                3.Parameter that is not passed will be Undefined.
-                4.If return has nothing on the right side will return undefined.
-                5.Property that doesn,t exists on an object. 
-                6.Accessing array elements outside of the index range.
-                7.Deleting an element inside an array.
-                8.If set a value directly will give undefined.
-            </p>
-        </div>
+      </section>
     </main>
+
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 </body>
 </html>

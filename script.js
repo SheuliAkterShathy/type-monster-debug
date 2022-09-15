@@ -121,7 +121,7 @@ const start = () => {
       console.log(startCountdown)
     }
     count--;
-  }, 10);
+  }, 1000);
 };
 
 // START Countdown
